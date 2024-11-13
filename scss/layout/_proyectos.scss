@@ -12,6 +12,7 @@
         border: 1px solid $Color-border;
         background-color: $Color-primary;
         border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         overflow: hidden;
         .aux{
             width: 100%;

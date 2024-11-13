@@ -8,7 +8,17 @@
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    
+
+    background: rgb(110, 91, 39);
+    background: radial-gradient(circle, rgb(110, 91, 39) 8%, rgb(81, 68, 33) 16%, rgb(48, 42, 26) 24%, rgb(33, 31, 23) 32%, rgb(21, 21, 21) 40%);
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ajusta la altura mínima al 100% del viewport */
+    overflow-y: auto; /* Permite el desplazamiento si el contenido excede */
+
+
 
     @include mobile{
         width: 100vw;
