@@ -1,0 +1,29 @@
+@import "../utilities/variables";
+body{
+   background-color: $Color-secundary;
+
+   font-family: $Lato;
+   display: flex;
+   flex-direction: row;
+   img{
+      max-width: 200px;
+   }
+
+   h1{
+      color: $Color-font;
+   }
+   h2{
+      color: $Color-font;
+   }
+   h3{
+      color: $Color-font;
+   }
+   p{
+      color: $Color-terceary;
+   }
+
+   a{
+      color: $Color-link;
+      text-decoration: none;
+   }
+}

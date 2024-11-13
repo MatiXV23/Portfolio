@@ -1,0 +1,107 @@
+@import "../utilities/mixins";
+
+.proyectos-grid{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.7rem;
+
+
+    .proyecto{
+        border: 1px solid $Color-border;
+        background-color: $Color-primary;
+        border-radius: 20px;
+        overflow: hidden;
+        .aux{
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+            }
+        }
+    
+    
+        .desc{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            margin: 2rem;
+            height: 8rem;
+            .skills {
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .skill {
+                    text-align: center;
+                    width: fit-content;
+                    margin: 0 1rem 0 0;
+                    h3 {
+                        height: fit-content;
+                        width: fit-content;
+                        padding: 1.2rem;
+                        font-size: 1.4rem;
+                        background-color: $Color-secundary;
+                        border-radius: 15px;
+                        border: 1px solid $Color-border;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    @include mobile{
+        grid-template-columns: 1fr;
+
+        .proyecto{
+            .desc{
+                height: 10rem;
+                margin: 0;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                .skills{
+                    justify-content: center;
+                    gap: 1.3rem;
+                    padding-bottom: 1rem;
+                    .skill{
+                        margin: 0;
+                        h3{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include tablet{
+        grid-template-columns: 1fr;
+
+        .proyecto{
+            .desc{
+                height: 10rem;
+                margin: 0;
+                justify-content: center;
+                align-items: start;
+                margin-left: 1.3rem;
+                gap: 2rem;
+                .skills{
+                    justify-content: center;
+                    gap: 1.3rem;
+                    .skill{
+                        margin: 0;
+                        h3{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

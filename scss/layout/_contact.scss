@@ -1,0 +1,125 @@
+.Contact{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+
+    .titles {
+        width: 100%;
+        height: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h2{
+            font-size: 3rem;
+            color: $Color-font;
+        }
+       
+        .iconos{
+            display: flex;
+            justify-content: end;
+            a{
+                margin-left: 3rem;
+                font-size: 3rem;
+                color: $Color-complementary;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .contact-area{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        border-radius: 15px;
+        margin-bottom: 3rem;
+        border: 1px solid $Color-border;
+
+        .information{
+            position: relative;
+            width: auto;
+            height: 22rem;
+            flex-shrink: 0;
+            background-color: $Color-primary;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 2rem 2rem 1rem;
+            a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                text-decoration: none;
+                color: $Color-font;
+                i{
+                    color: $Color-complementary;
+                    margin: 1.5rem;
+                    font-size: 2rem;
+                }
+
+            }
+        }
+
+        .contact-form {
+            
+            
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+    
+    
+            form{
+                width: 70%;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                color: $Color-font;
+                background: none;
+                padding: 0 0 5px 0;
+            }
+        
+            input,
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: none; 
+                border-bottom: 1px solid $Color-font;
+                background: none; 
+                border-radius: 0;
+                color: $Color-font;
+            }
+        
+            input[type="submit"] {
+                background-color: $Color-link;
+                border: none;
+                cursor: pointer;
+                color: $Color-font;
+        
+                &:hover {
+                    background-color: #4863bd;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        .contact-area{
+            .information{
+                width: 100%;
+            }
+            .contact-form{
+                display: none;
+            }
+        }
+    }
+}
